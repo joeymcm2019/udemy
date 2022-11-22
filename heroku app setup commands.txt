@@ -1,0 +1,33 @@
+touch Procfile
+vim Procfile
+web: node app.js
+
+
+
+git init
+git add .
+git commit -m ""
+
+npx heroku login
+npx heroku create appName
+npx heroku git:remote -a appName
+git push heroku master
+
+package.json:
+
+  "license": "ISC",
+  "engines": { //insert here
+    "node": "16.17.1"
+  },
+
+"scripts": {
+   "start": "node index.js"
+}
+
+touch .gitIngore
+
+/node_modules
+npm-debug.log
+.DS_Store
+/*.env
+

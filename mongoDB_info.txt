@@ -1,0 +1,83 @@
+>npx mongosh
+
+>use dbName
+switch to db with dbName
+>db
+show current db
+
+CRUD operations
+Create:
+>db.users.insertOne( 
+		{
+			name: "sue",
+			age: 26,
+			status: "pending"
+		}
+)
+
+>db.users.insertMany( 
+	[{ 
+		name: "Scott",
+		age: 33
+	},
+	{
+		name: "Raymond",
+		age: 24
+	}]
+)
+
+Read:
+documentation:
+https://www.mongodb.com/docs/manual/reference/method/db.collection.find/
+db.collection.find(query, projection)
+query: optional. specifies selection filter using query operators. to return all, omit it or use {}
+projection: optional. Specifies the fields to return in the documents that match the query filter. To return all fields, omit this parameter.
+https://www.mongodb.com/docs/manual/reference/method/db.collection.find/#std-label-find-projection
+<field>: <1 or true> include
+<field>: <0 or false> exclude
+
+>db.users.find()
+will show all users
+>db.users.find( {age: 30})
+finds users with an age of 30
+>db.users.find( {age: 30}, {name: "Scott"}) //bad
+don't use
+
+>db.users.find( {age: 30, name: "Joey"}) 
+seems to work the same way.
+>db.users.find().limit(5) 
+limit the results
+{ $gt: 10 } means greater than.
+$lt: less than
+$gte: greater than or equal to
+
+>db.users.find ( {age: { $gte: 18 },
+		 {name: 1, age: 1}) //list a name and age with each entry
+>show collections
+shows db collections
+
+Enterprise shopDB> db.Products.insertMany( [{ id: 1, name: "Pen", price: 1.20 , stock: 32} , { id: 2 , name: "Pencil", price: .80, stock 12
+
+useful:
+Enterprise shopDB> db.Products.find({},{_id: 0})
+//gets rid of auto created variable.
+
+Update: 
+
+Enterprise shopDB> db.newItem.insertOne({ _id: 1, name: "Chicken", stock: 5, weight: 10 })
+Enterprise shopDB> db.newItem.updateOne( {_id: 1}, {$set: {status: "edible"}})      
+updates chicken to have new variable status and sets it to edible
+
+first param is query selector.
+
+there's also update many
+db.users.updateMany({//select all}, {$set: {status: "cool"}})
+adds cool status to all users.
+
+
+db.collection.replaceOne(filter, replacement)
+
+Delete:
+db.collection.deleteOne() or many
+
+delete collection: db.dbName.drop()

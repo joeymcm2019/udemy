@@ -1,0 +1,16 @@
+REST: REpresentational State Transfer
+
+Use HTTP request verbs
+
+REST         DataBase
+Get          Read
+Post  	 Create
+Put Patch    Update
+Delete	 Delete
+
+Put 
+Updating DB by sending entire entry to replace previous one
+Patch
+Only update part of DB entry that needs to be updated/patched
+
+Use specific pattern of routes/endpoint URLs

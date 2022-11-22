@@ -1,0 +1,19 @@
+<%- include("partials/header") -%>
+
+<h1>Welcome Home!</h1>
+<p> <%= homeStartingContent%></p>
+
+<% posts.forEach(function(element){ %>
+<h1>  <%= element.title %>  </h1>
+<p> 
+    <% if (element.composition.length > 100){ %>
+    <%= element.composition.substring(0,100) + " ..." %>
+    <% } %>
+    <a href="<%='/posts/'+element.title%>">read more</a>
+    <% if (element.composition.length <= 100){ %>
+    <%= element.composition %> 
+    <% } %>
+</p>
+<% }) %>
+
+<%- include("partials/footer") -%>

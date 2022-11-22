@@ -1,0 +1,197 @@
+a {
+    color:rgb(29, 71, 126);
+}
+body {
+    background-color: #f2f5ff;
+    margin: 0px;
+    font-family:  verdana, sans-serif;
+}
+
+h1 {
+    font-size: 90px;
+    font-family: "Pinyon Script";
+    margin-bottom: 25px;
+    display: inline-block;
+    margin-right: 10px;
+    margin-left: 10px;
+    margin-top: 40px;
+    color: #1d477e;
+}
+
+hr {
+    width: 5%;
+    border-style: dotted none none none;
+    border-width: 5px;
+    border-color: #e7e7e7;
+    margin-top: 90px;
+    margin-bottom: 40px;
+}
+
+h2 {
+    color:rgb(29, 71, 126);
+    font-weight: normal;
+    margin-top: 5px;
+}
+
+
+#strong1 {
+    font-size: 20px;
+    color:rgb(29, 71, 126)
+}
+
+#hello {
+    margin-bottom: 25px;
+}
+#mKern {
+    position: relative;
+    right: 45px;
+    /*moving closer to left character */
+}
+
+table {
+    position: relative;
+    margin: 20px auto;
+
+}
+
+p {
+    line-height: 30px;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+#lastP{
+    margin-bottom: 20px;
+}
+
+
+strong {
+    font-family: verdana, sans-serif;
+
+}
+
+.bottom {
+    text-align: center;
+    background-color:rgb(129, 171, 226);
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+}
+
+.cloud {
+    position: absolute;
+    width: 15%;
+    left: 30%;
+}
+
+.cloud2 {
+    position: absolute;
+    width: 15%;
+    left: 55%;
+}
+
+.top {
+    height: 505px;
+    padding-top: 0px;
+    margin-top: 0px;
+    background-color: rgb(222, 240, 255);
+    text-align: center;
+}
+
+#mountImg {
+    position: relative;
+    width: 60%;
+    margin: 0 auto;
+}
+
+.mountain {
+    display: flex;
+    width: 100%;
+    bottom: 0px;
+    background-color: rgb(222, 240, 255);
+}
+
+.middle {
+    text-align: center;
+    padding-top: 50px;
+}
+
+.codeIMG {
+    width: 15%;
+    padding-top: 30px;
+}
+
+.outroP {
+    width: 90%;
+}
+
+.skillP {
+    text-align: center;
+    width: 90%;
+}
+
+.skillP2 {
+    text-align: center;
+    width: 90%;
+    padding-bottom: 10px;
+}
+
+.soccerIMG {
+    position: relative;
+    width: 10%;
+}
+
+.table1 {
+    position: relative;
+}
+
+.table2 {
+    position: relative;
+}
+
+.profile {
+    margin-left: 10px;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.profilePic {
+    padding-bottom: 30px;
+}
+
+.skills {
+    text-align: center;
+    margin: 100px auto;
+}
+
+.pBottom {
+    margin-bottom: 10px;
+    width: 90%;
+}
+
+.contact-me {
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+.btn {
+    background: #4f98f7;
+    background-image: -webkit-linear-gradient(top, #4f98f7, #1d477e);
+    background-image: -moz-linear-gradient(top, #4f98f7, #1d477e);
+    background-image: -ms-linear-gradient(top, #4f98f7, #1d477e);
+    background-image: -o-linear-gradient(top, #4f98f7, #1d477e);
+    background-image: linear-gradient(to bottom, #4f98f7, #1d477e);
+    -webkit-border-radius: 30;
+    -moz-border-radius: 30;
+    border-radius: 30px;
+    font-family: Arial;
+    color: #ffffff;
+    font-size: 20px;
+    padding: 10px 30px 10px 29px;
+    text-decoration: none;
+  }
+  
+  .btn:hover {
+    background: #4f98f7;
+    text-decoration: none;
+  }

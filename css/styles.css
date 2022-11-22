@@ -1,0 +1,91 @@
+/*
+Joey McMahon
+7/4/22
+*/
+
+body {
+    background-color: #e3f3ff;
+}
+
+hr {
+    width: 5%;
+    border-style: dotted none none none;
+    border-width: 5px;
+    border-color: #c4c4c4;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+h1 {
+    color: #2841b2;
+    margin-left: 10px;
+}
+
+h2 {
+    color: #2841b2;
+    margin-left: 10px;
+}
+
+h3 {
+    color: #2841b2;
+    margin-left: 10px;
+}
+
+h4 {
+    margin-left: 10px;
+}
+
+#divEx {
+    width:100px;
+    height:100px;
+    background-color: yellow;
+    display: flex;
+    justify-content:center;
+    border: 20px solid;
+    padding: 40px;
+    margin: 20px;
+  }
+  
+  #boxP {
+    display:inline; 
+    align-self:center;
+  }
+
+  p {
+    width: 90%;
+    margin-left: 10px;
+    text-align: left;
+    line-height: 1.5;
+  }
+
+  .btn {
+    background: #4f98f7;
+    background-image: -webkit-linear-gradient(top, #4f98f7, #1d477e);
+    background-image: -moz-linear-gradient(top, #4f98f7, #1d477e);
+    background-image: -ms-linear-gradient(top, #4f98f7, #1d477e);
+    background-image: -o-linear-gradient(top, #4f98f7, #1d477e);
+    background-image: linear-gradient(to bottom, #4f98f7, #1d477e);
+    -webkit-border-radius: 30;
+    -moz-border-radius: 30;
+    border-radius: 30px;
+    font-family: Arial;
+    color: #ffffff;
+    font-size: 20px;
+    padding: 10px 30px 10px 29px;
+    text-decoration: none;
+  }
+  
+  .btn:hover {
+    background: #4f98f7;
+    text-decoration: none;
+  }
+
+  .form1 {
+    margin-left: 10px;
+  }
+
+  #ul1{
+    max-width: 50%;
+  }
+
+

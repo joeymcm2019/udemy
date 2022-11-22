@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+
+<body>
+
+    <h1>HTML Knowledge Base</h1>
+    <h2>Review Material</h2>
+
+    <left>
+        <h3><a href="index.html">back</a>
+    </left>
+    <br>
+
+    <hr>
+
+    <h2>Chapter 1: HTML Basics </h2>
+    <p>HTML stands for HyperText Markup Language. The language relies on tags and content within those tags.
+        For example: the following line uses the h1 tag. <br> &lt;h1> Hi there!&lt;\h1> <br>
+        This tag is used for creating headers on pages. Tags like this one have a beginning tag
+        and an end tag (&lt;h1>, &lt;\h1> respectively). Some tags are self closing tags, meaning one should not use
+        a close tag with these sort of tags. For example, &lt;br> creates a new line on the page, and requires no
+        closing tag. This makes sense, since a line break doesn't really have a beginning and end. The
+        computer just does it.
+        However, the computer needs to know when headers are finished, or really any tag which includes
+        content or is modifying content (eg. center). We have to tell the computer when we're done.
+        <br><br>
+        The next piece to know about tags is that some of them have attributes. The header tags, for
+        example, have the attribute allign, and can be utilized as follows: <br>
+        &lth1 align="center">Hello World!&lt/h1> <br>
+
+        This creates the header, "Hello World", and centers it on the page. Attributes are useful for
+        adding customizations to elements, thereby aiding in creating a certain page style and format.
+        <br>
+        The examples here are quite limited; whereas the amount of tags and attributes needs to know in
+        order to create an appealing site are quite numerous. Fortunately, there are useful resources on the
+        web that make finding pertinen information much easier than trying to memorize it all. The following
+        sites are quite handy for finding whatever one needs when coding a webpage. I'm liking devdocs a lot
+        so far. I can find whatever I'm looking for by simply typing in the key term. Nice and fast.
+        If all else fails, google has my back. Have to get that thrill of efficiency :)
+        <br><br>
+        <a href="https://www.w3schools.com/" target="_blank">w3schools</a>
+        <br>
+        <a href="https://developer.mozilla.org/en-US/" target="_blank">Mozilla Developer Network Docs</a>
+        <br>
+        <a href="https://devdocs.io/" target="_blank">devdocs.io</a>
+        <br><br>
+        Note: use &lt;!--Comments go here--> for notes/comments in code
+    </p>
+    <!--comments!!!-->
+
+    <h2>Useful Resources</h2>
+    <p>
+        Here's a gem of a site. You can see what webpages looked like years ago. Check out google in beta mode!
+        <a href="https://web.archive.org/" target="_blank">Web Archives</a>
+        <br>
+        <a href=https://web.archive.org/web/19990427094925/http://www.google.com/ target="_blank"> Google Beta
+            Version</a>
+        <br><br>
+        More useful sites:
+        <br>
+        <a href="https://docs.microsoft.com/en-us/visualstudio/ide/default-keyboard-shortcuts-in-visual-studio?adlt=strict&toWww=1&redig=CD0E13D54D1948878724D970B3B5B2EB&view=vs-2022"
+            target="_blank"> Keyboard Shortcuts in VS</a> (my favorite is auto format: shift + alt + f)
+        <br>
+        <a href="https://docs.emmet.io/cheat-sheet/" target="_blank">Emmet documentation</a>
+        <br>
+        <a href="https://www.joelonsoftware.com/2003/10/08/the-absolute-minimum-every-software-developer-absolutely-positively-must-know-about-unicode-and-character-sets-no-excuses/?adlt=strict&toWww=1&redig=A5B19348007644A3A15DB359CC9280AA"
+            target="_blank">Understanding Character Encoding</a>
+    </p>
+    <h2>Side Note</h2>
+    <p>
+        Evidently, choosing which tag to use isn't as simple as one may think. When it comes to choosing the
+        correct tag for text content, for example, don't assume that just because your tag does what you want,
+        that it is actually accomplishing what you want. The tag i and the tag em both make their content
+        italisized but em is actually what tells browsers that the information is stressed. There is a
+        semantic difference.
+        See <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/em" target="_blank">
+            i vs em.</a>
+        The tag strong vs the tag b is another example. Both make the text bold, but their semantics are
+        different.
+    </p>
+    <h2>More Info</h2>
+    <p>
+        &lt;ul> is used for unordered lists. In other words, bullet points. &lt;ol>, similarly, is used for
+        ordered lists. Then, for ul you use style="list-style-type:_____" and fill the blank with whatever
+        attribute you'd like (circle,disc,or
+        square). For ol you use type and or start.
+        <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/ol" target="_blank">
+            See Docoumentation (ol).
+        </a>
+        Within the ul or ol, use &lt;li> to create list elements (bullet points).
+        <br><br>
+        <Strong>Example</Strong>
+    </p>
+    <p>
+    <ul style="list-style-type:disc" id="ul1">
+        <li>ul.1</li>
+        <ol type="cirlce">
+            <li>ol.1</li>
+            <li>ol.2</li>
+            <li>ol.3</li>
+        </ol>
+        <li>ul.2</li>
+        <li>ul.3</li>
+    </ul>
+    </p>
+    <hr>
+
+    <h2>Chapter 2: Intermediate</h2>
+    <h3>Tables</h3>
+    <ul type="disc">
+        <li>Table Structure
+            <br>
+            &lt;table>
+            <br>
+            &lt;tr>
+            <!--Table Row Creation-->
+            <br>
+            &lt;td>cell info&lt;/td>
+            <!--Table Data/Column Creation-->
+            <br>
+            &lt;td>cell info&lt;/td>
+            <!--Column Two Info-->
+            <br>
+            &lt;/tr>
+            <!--End Table Row-->
+            <br>
+            &lt;/table>
+            <!--End Table-->
+            <br>
+        </li>
+    </ul>
+
+    <p>
+        The tag table creates the table. The tag tr creates a table row. The tag td creates a table cell/column.
+        This is where one puts content into their table. You can create as many rows and columns as you like.
+        First useful attribute I've learned about for tables is cellpadding which puts however much space one wants
+        between all the elements in the table.
+
+    </p>
+
+
+    <h3>Forms</h3>
+    <p>
+        We probably wouldn't get very far without forms, because forms allow us to take input from the user.
+        And of course, the vast majority of websites do this, for text inputs that is.
+        <br>
+        Creating forms is quite simple. Just use the tag form. Haven't learned much about its attributes yet
+        but for now we'll use the method attribute and set it to post.
+        <br><br>
+        <strong>Label:</strong> this tag puts text on our page which we can use to label form elements such as
+        a text box.
+        <br><br>
+        <strong>Input:</strong> this tag can create an input space for the user, for text, or a click box, or
+        other types of inputs. The type atrribute for this tag has many possibilities.
+        See <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input" target="_blank">MDN</a>
+        <br>
+
+        <strong>Example</strong>
+
+    <form class="form1" method="post">
+        <label>Your Name</label></td>
+        <input type="text" name="" value=""></td>
+        <input type="submit">
+    </form><br><br>
+    </p>
+
+    <p>
+        <strong>Code</strong> <br><br>
+        &lt;form class="" method="post"> <br>
+        &lt;label>Your Name &lt;/label> &lt;/td> <br>
+        &lt;input type="text" name="" value=""> &lt;/td> <br>
+        &lt;input type="submit"> <br>
+        &lt;/form> <br><br>
+
+
+        For more information, see <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/form"
+            target="_blank">MDN</a>
+    </p>
+
+
+    <hr>
+
+    <!--CHAPTER 3-->
+    <h2>Chapter 3: CSS</h2>
+    <h3>Background Color</h3>
+    <p>
+        Background color for a page can be quite easily changed by inserting a line of code into
+        the body tag. <br><br>
+        style="background-color: #e5effe;" <br><br>
+        For nice color choices, see
+        <a href="https://colorhunt.co/?adlt=strict&toWww=1&redig=C669E57367854361BCBA922DAE1CF766" target="_blank">Color
+            Hunt</a>
+        <br>
+        Also: <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/color_value" target="_blank">
+            MDN CSS/color_value
+        </a>
+    </p>
+
+
+
+    <h3>Styling all tags in a file with one go</h3>
+
+    <p>
+        Use the style tag to make modifications to all tags of your choice throughout your file. For example,
+        you can change all the hr tags at once, or all the table tags at once. Just use the style tag to make
+        the modifications you want to see for each instance of these elements.
+        <br><br>
+        <strong>Example:</strong><br><br>
+        &lt;style> <br>
+        hr { <br>
+        height: 3px; <br>
+        background-color: #000000; <br>
+        border-style: none; <br>
+        } <br>
+        &lt;/style> <br><br>
+
+        This changes any hr tags (that don't have these attributes specified) in your file to have
+        these attribute specifications. No more rewriting the same code over and over again. All
+        hr tags in this file will have these attributes. All you have to is write &lthr> and your done!
+        Good time saver!
+
+        <br><br>
+        <strong>Corollary</strong><br><br>
+
+        Implementing such changes across all pages of a site is the next step. And it's simple! One simply needs
+        to create a css file where they will store these stylings. Then, in the header section of each page, one
+        simply adds the folling line: <br><br>
+
+        &lt;link rel="stylesheet" href="css/styles.css"><br><br>
+
+        As you can see I used a folder called css, and my css file was styles.css. Using this line in each page I have
+        ensures that each page will implement the same stylings that I have chosen. This makes it much easier
+        to make changes across the entire site. Quite nice!
+
+        <br><br>
+        <strong>CSS Syntax</strong><br><br>
+        Once inside the css document, the following syntax is used to modify whatever elements one would like.
+        <br><br>
+
+        selector { property: value; }
+
+        <br><br>
+
+        Selector: what tag do you want to modify? <br>
+        property: what attribute do you want to modify from the tag? <br>
+        value: how do you want to modify the attribute? <br><br>
+        Pretty simple!
+
+        <br><br>
+        Finding the selector is probably going to be the easy part. But finding the right property that will change
+        what you want--that might not be so easy sometimes. So, MDN here we come: <br><br>
+
+        <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference?adlt=strict&toWww=1&redig=51791ED79FE446ACB9FB88735ADA87DE"
+            target="_blank">Properties</a><br><br>
+
+        <strong>The class and id selectors</strong><br><br>
+        Want to use different settings on the same tag? For example, want your h1 to be blue sometimes but other times
+        have it be red? It's quite simple! But, BE WARNED! The id selector can only be used once per page! The class
+        selector, on the other hand, can be used to modify as many tags as you want! See examples below for how
+        to set these up:
+        <br><br>
+
+        class example: <br> &lt;h1 class="blueHeader"> <br>
+        id example: <br> &lt;h1 id="blueHeader"> <br><br>
+
+        These lines make it so this h1 will follow the CSS stylings set up for the class blueHeader. Now all we have
+        to do is add a little code to our style.css. Note the dot before the class label and the # before the
+        id label. This is important!!
+        See below: <br><br>
+
+        class example: <br>
+
+        .blueHeader { (DON'T FORGET THE DOT!!)<br>
+        background-color: "blue"; <br>
+        } <br><br>
+
+        id example: <br>
+
+        #blueHeader { (DON'T FORGET THE #!!)<br>
+        background-color: "blue"; <br>
+        } <br><br>
+
+
+        We can do the same thing for a redHeader by repeating the process. Pretty handy! Note:
+        the class and id selectors are more specific than tag selectors, meaning they have higher
+        precedence.<br><br>
+
+        <strong>Multple Class Selection</strong><br><br>
+        To apply multiple classes to a tag, simply add a space and another class name within the
+        class selector. See below: <br><br>
+
+        &lt;h1 class="blueHeader bigFont"> <br><br>
+
+        <strong>NOTE:</strong> you cannot have multiple id selectors for a tag. <br><br>
+
+        <strong>Psuedo Classes</strong><br><br>
+        Psuedo Classes are used when you want to affect an element when it's in a different state. Yes,
+        elements have different states. For example, when a user <strong><em>hovers</em></strong> over an
+        element with their mouse, this puts that element in a different state. Thus, html has a hover state.
+        See example below for how to use:
+        <br><br>
+
+        In our style.css:<br>
+        img:hover { <br>
+        background-color: "orange"; <br>
+        } <br><br>
+
+        This code will make it so whenever we hover over an img element, it will change its background color to orange.
+        <br><br>
+    </p>
+
+    <h3>Div element</h3>
+
+    <p>
+        The div element is useful for creating display blocks. One can <em>divide</em> the page into sections using
+        these, so to speak. The default setting is take up the whole width of the page, but this can be edited.
+        <br><br>
+    </p>
+
+
+
+    <h3>Box model</h3>
+    <p>
+        One can look at html elements as boxes. Each of these boxes has certain properties that are useful to
+        know and that one can change to create the design one desires. See below:
+        <br><br>
+        <img src="images/boxModel.jpg">
+        <br><br>
+        The blue section in the middle is the content. It has a height and width. Then there's the padding, border, and
+        margin properties. Each of these properties has a top, bottom, left, and right value.
+        <br><br>
+        <strong>padding:</strong> space between content and the border of the container element (div, for example).
+        Padding increases the size of the container element. This is because it expands the space around the content
+        area. The content area is just the defualt size of the container.
+        <br><br>
+        <strong>border:</strong> space around container. This adds to the total size of the container. For example,
+        if a container is 100px wide but has a 20px border, its total width will be 140px (20px border-left + 20px
+        border-right).
+        <br><br>
+        <strong>margin:</strong> space between container and next level container. If the page itself is the next level
+        container, then you get space between the outside of the page.
+        <br><br>
+        <strong>example:</strong>
+        <br><br>
+    </p>
+    <div id="divEx">
+        <p id="boxP">Content inside 100px div box with 20px solid border and 40px padding and 20px margin</p>
+    </div>
+    <br><br>
+
+    <p>
+        <strong>div code</strong><br><br>
+        width:100px; <br>
+        height:100px; <br>
+        background-color: yellow; <br>
+        display: flex; <br>
+        justify-content:center; <br>
+        border: 20px solid; <br>
+        padding: 40px; <br>
+        margin: 20px; <br><br>
+
+        <strong>paragraph code</strong><br><br>
+
+        <br>
+        align-self:center; <br><br>
+    </p>
+
+    <h3>Display</h3>
+    <p>
+        Four of the main values for display: block, inline, inline-block, none. <br><br>
+
+        <strong>block:</strong> these elements go across the whole page horizontally. Thus, they block out
+        other content from being on the same line. Examples include <em>paragraph, div, headers, etc.</em> Note
+        that even though you can change these elements width, they still block out other elements from being
+        on the same line. That is, unless you change their display property value.
+        <br><br>
+
+        <strong>inline:</strong> these elements can be placed on the same line as other inline elements.
+        Examples include <em>images, and span.</em> Note: height and width are not respected, though
+        padding and margin are.
+        <br><br>
+
+        <strong>inline-block:</strong> you can set the width and height of these elements and they be on the same line
+        as other inline or inline-block elements.<br><br>
+
+        <strong>none:</strong> the element will not be displayed and will not take up any space. <br><br>
+
+        <strong>Example of block, inline, & inline-block: </strong>
+        <a href="https://www.w3schools.com/Css/tryit.asp?filename=trycss_inline-block_span1"
+            target="_blank">w3schools</a>
+        <br></br>
+    </p>
+
+    <h3>CSS positioning</h3>
+    <p>
+        <strong>Three Default Rules:</strong><br><br>
+        1. Content effects box models. For example, a large font makes its content box larger. Note, this
+        is different than its container. If a paragraph is in a div, for example, the size of the paragraph does not
+        effect size of div. But the font size, and size of paragraph does effect the size of its own content box.
+        <br><br>
+        2. The order of the content comes from the order of the code. Plain and simple.
+        <br><br>
+        3. Children sit on top of their parents. If a paragraph is within a div, it sits on top of the div element.
+        If a span is within a paragraph, it sits on (within) the paragraph.
+        <br><br>
+    </p>
+
+    <h4>Four Position Properties</h4>
+    <p>
+        1. Static: default html setting for all elements. Keep to default html flow<br><br>
+        2. Relative: positions an element relative to default position using top,
+        bottom, left, and right values/coordinates. Note left actually moves the element right,
+        and vice versa. Top moves element down, bottom moves element up.
+        <strong>NOTE: <em> this doesn't effect the position of anything else on screen, </em></strong>
+        as if the element was still in its <em><strong>original position.</strong></em>
+        <br><br>
+        3. Absolute: positions an element relative to its parent. The right value distances an element from the right
+        ending side of its parent. The left its left. The top its top. The bottom its bottom. Essentially adds
+        a margin to the parent element. <strong>NOTE: </strong>absolute positioning <strong><em>affects html flow.</em>
+        </strong> The element is <strong><em>no longer </em></strong>apart of the natural flow of the document. It's as
+        if the element doesn't exist to the rest of the page.
+        <br><br>
+        4. Fixed: positions an element relative to the page, keeping its position the same regardless of scrolling.
+        Useful for nav bar. Top, bottom, left right work the same as with absolute positioning.
+        <br><br>
+    </p>
+
+
+    <h3>Centering Elements</h3>
+    <p>
+        Use <strong>text-align: center</strong> within the parent class to center text elements within the
+        parent element. I like this method the most for centering text. The other way is to use
+        <strong>margin: 0 auto</strong> for the text element. This sets the margin for the top & bottom to 0, while
+        setting the margins for left and right automatically, and such that the text is centered.
+         <strong>Note:</strong> The problem with this is that it centers the text based on the width of text element rather than the text
+        itself. Therefore, it's less accurate. You can use relative positioning, however, to help with this. You can also
+        use the center tag to horizontally center any elements you wish. I think this is a pretty good method.
+        You can also use <strong>vertical-align: center</strong> to center an element. I need to test this one more.
+        <br><br>
+
+        <strong>Font Resources: </strong><br>
+        <a href="https://www.cssfontstack.com/?adlt=strict&toWww=1&redig=4FB6A6BD14BB467D9849C147A5F14BC5"
+            target="_blank">cssfontstack.com</a><br>
+        <a href="https://fonts.google.com/?adlt=strict&toWww=1&redig=7CCC2D06066548F8B271E74DA61474D4&safe=active"
+            target="_blank">google fonts</a><br><br>
+
+        Google fonts is nice because you can easily embed the fonts you want. They give you the code to add
+        to index.html.
+        <br><br>
+
+        More useful positioning attributes:<br><br>
+        <strong>float: </strong> value can either be set to left or right. Takes the next element and puts it on the same line. Useful for "floating" text next to an image. <br><br>
+        <strong>clear:</strong> basically the opposite of float. value either set to left or right, but clear
+        ensures that nothing is to the left or right of an element. Prevents text from being wrapped around images.
+    </p>
+
+    <h3>Button Creation Resource</h3>
+    <p><a class="btn" href="https://css3buttongenerator.com/" target="_blank">button generator</a></p>
+
+
+    <hr>
+    <h3><a href="index.html">Home</a>
+</body>
+
+
+</html>

@@ -1,0 +1,133 @@
+table format:
+CREATE TABLE tableName {
+column1 dataType
+column2 dataType ...
+id INT NOT NULL //not null makes id required for creating a table of type tablename.
+}
+
+SQL workflow
+
+CRUD 
+Create 
+Read
+Update
+Destroy
+
+INSERT INTO table_name (column1, column2, column3, ...)
+VALUES (value1, value2, value3, ...);
+
+
+//if you're going to fill in every value, use the following
+INSERT INTO table_name
+VALUES (value1, value2, value3, ...);
+
+Example
+
+Create:
+
+CREATE TABLE products (
+id INT,
+name STRING,
+price MONEY,
+PRIMARY KEY (id)
+)
+
+"The PRIMARY KEY constraint uniquely identifies each record in a table.
+
+Primary keys must contain UNIQUE values, and cannot contain NULL values." 
+https://www.w3schools.com/sql/sql_primarykey.asp
+
+INSERT INTO products
+VALUES (1, "Pen", 1.20)
+
+Read:
+
+SELECT * FROM products WHERE id=1;
+
+* means everything
+WHERE allows for greater specificity
+
+https://www.w3schools.com/sql/sql_where.asp   for more WHERE operators
+
+SELECT name, price FROM products;
+
+Update:
+
+update data:
+
+UPDATE products
+SET price = 0.80
+WHERE id=2
+
+update schema:
+
+ALTER TABLE products
+ADD stock INT
+
+Destroy: 
+
+DELETE FROM products
+Where name="Pencil"
+
+
+CREATE TABLE orders (
+  id INT NOT NULL,
+  order_number INT,
+  customer_id INT,
+  product_id INT,
+  PRIMARY KEY (id),
+  FOREIGN KEY (customer_id) REFERENCES customers(id),
+  FOREIGN KEY (product_id) REFERENCES products(id)
+  )
+
+INSERT INTO orders
+VALUES (1,1481,1,1)
+
+INSERT INTO orders
+VALUES (2,4000,2,2)
+
+
+"The FOREIGN KEY constraint is used to prevent actions that would destroy links between tables.
+
+A FOREIGN KEY is a field (or collection of fields) in one table, that refers to the PRIMARY KEY in another table.
+
+The table with the foreign key is called the child table, and the table with the primary key is called the referenced or parent table."
+
+https://www.w3schools.com/sql/sql_foreignkey.asp
+
+
+CREATE TABLE customers (
+id INT NOT NULL,
+first_name STRING,
+last_name STRING,
+address STRING,
+PRIMARY KEY (id)
+)
+
+INSERT INTO customers
+VALUES (1, "Joey", "McMahon", "213 Secret St.")
+
+INSERT INTO customers
+VALUES (2, "David", "Goliath", "213 Israel")
+
+
+Join:
+
+Select column name(s)
+From table:
+INNER JOIN table2 on table1.column_name = table2.column_name;
+
+Select orders.order_number, customers.first_name, customers.last_name, customers.address
+From orders
+INNER JOIN customers on orders.customer_id = customers.id;
+
+
+Select orders.order_number, orders.customer_id, products.id, products.name, products.price
+From orders
+INNER JOIN products on orders.product_id = products.id;
+
+Select orders.order_number, products.name, products.price, products.stock
+From orders
+INNER JOIN products on orders.product_id = products.id;
+
+note: use foreign key on last line to show which things must be equal. 
