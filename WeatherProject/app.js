@@ -11,7 +11,7 @@ app.get("/", function (req, res) {
     res.sendFile(__dirname + "/index.html"); //bring up index.html
 });
 
-app.listen(3000, function(){
+app.listen(process.env.PORT || 3000, function(){
     console.log("listening on port 3000");
 });
 
@@ -28,10 +28,16 @@ app.post("/", function(req, res){
     https.get(url, function (response) {
         response.on("data", function (data) {
             const weatherData = JSON.parse(data);
+            console.log(weatherData)
+            if (weatherData.main){
             //JSON.stringify(weatherData) basically does the opposite
             //console.log(weatherData);
             const temp = weatherData.main.temp;
-            const city = weatherData.name;
+            var city = weatherData.name;
+            console.log("city: " + city);
+            if (city === ""){
+                city = "Unnamed Location"
+            }
             const weatherDescription = weatherData.weather[0].description;
             const weatherIcon = weatherData.weather[0].icon;
             console.log(weatherIcon);
@@ -40,7 +46,18 @@ app.post("/", function(req, res){
             res.write(`<h1>The temp is ${temp} degrees F in ${city}. </h1>`);
             res.write(`<img src="${weatherIconUrl}">`);
             res.write(`<p> Weather description: ${weatherDescription}.</p>`);
+            res.write("<a href='https://joeyweather.herokuapp.com/'>home</a>")
             res.send();
+            } else {
+                res.write("<h1>Error in getting weather</h1>");
+                res.write("<p>Make sure latitude and longitude are valid values</p>")
+                res.write("<a href='https://joeyweather.herokuapp.com/'>home</a>")
+                res.send();
+            }
         });
     });
 });
+
+app.get("/favicon.ico", function (req, res){
+    res.send(null);
+})
